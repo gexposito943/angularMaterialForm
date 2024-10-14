@@ -1,75 +1,46 @@
-<h1>Sign Up</h1>
+<h1 class="titul-inscripcio">Inscripció d'atletisme</h1>
 
+<form class="example-form">
 
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-        <mat-label>email</mat-label>
-        <input matInput placeholder="Ex. nom@domini.cat" type="email">
-      </mat-form-field>
-
-     
-        <mat-form-field class="example-full-width">
-          <mat-label>Email2</mat-label>
-          <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                 placeholder="Ex. pat@example.com">
-          <mat-hint>Errors appear instantly!</mat-hint>
-          @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-            <mat-error>Please enter a valid email address</mat-error>
-          }
-          @if (emailFormControl.hasError('required')) {
-            <mat-error>Email is <strong>required</strong></mat-error>
-          }
-        </mat-form-field>
-   
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Ex. patata" type="password">
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Language</mat-label>
-        <mat-select>
-          @for (language of languages; track language) {
-            <mat-option [value]="language.value">{{language.viewValue}}</mat-option>
-          }
-        </mat-select>
-      </mat-form-field>
-  </form>
-  
+  <mat-form-field class="example-full-width">
+    <mat-label>Nom</mat-label>
+    <input matInput placeholder="Introduce tu nombre" required>
+  </mat-form-field>
 
   
-<label>Username:
-    <input type="text" [(ngModel)]="this.user.username" />
-</label>
-<label>Email:
-    <input type="email" [(ngModel)]="this.user.email" />
-</label>
-<label>Language:
-    <select [(ngModel)]="this.user.language" (change)="!this.user.isValid(this.repeatPassword)">
-        @for(language of this.getLanguages();track language) {
-            <option [value]="language">{{language}}</option>
-        } 
-    </select>
-</label>
-<button (click)="this.save()" [disabled]="this.isDisabled()">Send</button>
+  <mat-form-field class="example-full-width">
+    <mat-label>Cognom</mat-label>
+    <input matInput placeholder="Introduce tu apellido" required>
+  </mat-form-field>
 
-<label>Password:
-    <input type="password" [(ngModel)]="this.user.password" />
-</label>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Correu</mat-label>
+    <input matInput placeholder="Introduce tu correo" type="email" required>
+  </mat-form-field>
 
-<label>Repeat password:
-    <input type="password" [(ngModel)]="this.repeatPassword" />
-</label>
 
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+  <mat-form-field class="example-full-width">
+    <mat-label>DNI</mat-label>
+    <input matInput placeholder="Introduce tu DNI" required>
+  </mat-form-field>
+
+ 
+  <mat-form-field class="example-full-width">
+    <mat-label>Contrasenya</mat-label>
+    <input matInput placeholder="Introduce tu contraseña" type="password" required>
+  </mat-form-field>
+
+ 
+  <div class="distance-options">
+    <label>Distància</label>
+    <mat-radio-group class="distance-radio-group" name="distance" required>
+      <mat-radio-button value="10k">10k</mat-radio-button>
+      <mat-radio-button value="20k">20k</mat-radio-button>
+      <mat-radio-button value="30k">30k</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+ 
+  <button mat-button color="accent" type="submit">Subscriu-me</button>
+</form>

@@ -13,6 +13,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio'; // Asegúrate de que esto esté importado
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -36,10 +37,11 @@ interface Language {
     MatFormFieldModule, 
     MatInputModule,
     MatSelectModule,
+    MatRadioModule, // Agregado MatRadioModule
     ReactiveFormsModule
   ],
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css'
+  styleUrls: ['./sign-up.component.css'] // Corrige styleUrl a styleUrls
 })
 export class SignUpComponent {
   user:User = new User();

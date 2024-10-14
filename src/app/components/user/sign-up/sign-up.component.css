@@ -1,9 +1,77 @@
+.titul-inscripcio {
+  margin-left: 2rem;
+  font-size: 2em; 
+  color: #4A90E2; 
+  margin-bottom: 10px; 
+  font-weight: bold; 
+}
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+    margin: 2rem;
+    
+  }
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2rem; 
   }
   
   .example-full-width {
     width: 100%;
   }
+ 
+  .distance-options {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.custom-radio-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-radio-button:hover {
+    background-color: #e0e0e0;
+}
+
+.mat-radio-button.mat-radio-checked.custom-radio-button {
+    background-color: #3f51b5; 
+    color: white; 
+}
+.example-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; 
+  margin-left: 2rem; 
+}
+
+@media (max-width: 600px) {
+  .example-form {
+    width: 100%; 
+    margin-left: 1rem; 
+  }
+}
+button {
+    background-color: transparent; 
+    border: none; 
+    color: #3f51b5; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 2em; 
+    cursor: pointer; 
+    transition: color 0.3s, transform 0.2s; 
+}
+
+button:hover {
+    color: #1e88e5; 
+    transform: scale(1.05); 
+}
